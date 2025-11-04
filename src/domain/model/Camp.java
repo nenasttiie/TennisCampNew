@@ -4,6 +4,18 @@ public class Camp {
     private int camp_id;
     private String camp_name, dates, country, cost, courts;
 
+    @Override
+    public String toString() {
+        return "Camp{" +
+                "camp_id=" + camp_id +
+                ", camp_name='" + camp_name + '\'' +
+                ", dates='" + dates + '\'' +
+                ", country='" + country + '\'' +
+                ", cost='" + cost + '\'' +
+                ", courts='" + courts + '\'' +
+                '}';
+    }
+
     public Camp(int camp_id, String camp_name, String dates, String country, String cost, String courts) {
         this.camp_id = camp_id;
         this.camp_name = camp_name;

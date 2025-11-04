@@ -11,6 +11,16 @@ public class Record {
         this.booking_date = booking_date;
     }
 
+    @Override
+    public String toString() {
+        return "Record{" +
+                "record_id=" + record_id +
+                ", player_id=" + player_id +
+                ", camp_id=" + camp_id +
+                ", booking_date='" + booking_date + '\'' +
+                '}';
+    }
+
     public int getRecord_id() {
         return record_id;
     }

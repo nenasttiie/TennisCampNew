@@ -1,14 +1,16 @@
-package application.command;
+package application.command.coach;
 
+import application.command.Command;
+import application.services.CoachService;
 import infrastructure.repository.InMemoryCoachRepository;
 
 import java.util.Scanner;
 
 public class FindCoachByIdCommand implements Command {
-    private final InMemoryCoachRepository theCoachRepository;
+    private final CoachService coachService;
 
-    public FindCoachByIdCommand(InMemoryCoachRepository coachRepository) {
-        this.theCoachRepository = coachRepository;
+    public FindCoachByIdCommand(CoachService coachService) {
+        this.coachService = coachService;
     }
 
     @Override
@@ -16,6 +18,6 @@ public class FindCoachByIdCommand implements Command {
         System.out.println("Введите ID тренера, которого хотите найти: ");
         Scanner scanner = new Scanner(System.in);
         int coachId = scanner.nextInt();
-        System.out.println(theCoachRepository.findCoachById(coachId));
+        System.out.println(coachService.findCoachById(coachId));
     }
 }

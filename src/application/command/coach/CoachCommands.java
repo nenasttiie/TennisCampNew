@@ -1,10 +1,12 @@
-package application.command;
+package application.command.coach;
+
+import application.command.Command;
 
 public class CoachCommands {
-    private Command addCoachCommand;
-    private Command findCoachCommand;
-    private Command updateCoachCommand;
-    private Command deleteCoachCommand;
+    private final Command addCoachCommand;
+    private final Command findCoachCommand;
+    private final Command updateCoachCommand;
+    private final Command deleteCoachCommand;
 
     public CoachCommands(Command addCoachCommand, Command findCoachCommand, Command updateCoachCommand, Command deleteCoachCommand) {
         this.addCoachCommand = addCoachCommand;

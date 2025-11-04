@@ -1,15 +1,18 @@
-package application.command;
+package application.command.coach;
 
+import application.command.Command;
+import application.services.CampService;
+import application.services.CoachService;
 import domain.model.Coach;
 import infrastructure.repository.InMemoryCoachRepository;
 
 import java.util.Scanner;
 
 public class AddCoachCommand implements Command {
-    private final InMemoryCoachRepository theCoachRepository;
+    private final CoachService coachService;
 
-    public AddCoachCommand(InMemoryCoachRepository coachRepository) {
-        this.theCoachRepository = coachRepository;
+    public AddCoachCommand(CoachService coachService) {
+        this.coachService = coachService;
     }
 
     @Override
@@ -19,6 +22,7 @@ public class AddCoachCommand implements Command {
 
         System.out.println("Введите ID тренера:");
         int coachId = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Введите ID кемпа:");
         int campId = scanner.nextInt();
@@ -35,6 +39,6 @@ public class AddCoachCommand implements Command {
 
         Coach coach = new Coach(coachId, campId, surname, name, category);
 
-        theCoachRepository.addCoach(coach);
+        coachService.addCoach(coach);
     }
 }

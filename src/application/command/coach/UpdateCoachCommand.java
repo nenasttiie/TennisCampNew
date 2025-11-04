@@ -1,15 +1,17 @@
-package application.command;
+package application.command.coach;
 
+import application.command.Command;
+import application.services.CoachService;
 import domain.model.Coach;
 import infrastructure.repository.InMemoryCoachRepository;
 
 import java.util.Scanner;
 
 public class UpdateCoachCommand implements Command {
-    private final InMemoryCoachRepository theCoachRepository;
+    private final CoachService coachService;
 
-    public UpdateCoachCommand(InMemoryCoachRepository coachRepository) {
-        this.theCoachRepository = coachRepository;
+    public UpdateCoachCommand(CoachService coachService) {
+        this.coachService = coachService;
     }
 
     @Override
@@ -19,7 +21,7 @@ public class UpdateCoachCommand implements Command {
 
         int coachId = scanner.nextInt();
         scanner.nextLine();
-        Coach coach = theCoachRepository.findCoachById(coachId);
+        Coach coach = coachService.findCoachById(coachId);
         String flag;
 
         int campId = coach.getCamp_id();
@@ -57,6 +59,6 @@ public class UpdateCoachCommand implements Command {
         }
 
         Coach updatedCoach = new Coach(coachId, campId, surname, name, category);
-        theCoachRepository.updateCoach(updatedCoach);
+        coachService.updateCoach(updatedCoach);
     }
 }
