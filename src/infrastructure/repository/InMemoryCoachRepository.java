@@ -10,7 +10,7 @@ public class InMemoryCoachRepository implements CoachRepository {
 
     @Override
     public void addCoach(Coach coach) {
-        coaches.put(coach.getCoach_id(), coach);
+        coaches.put(coach.getCoachId(), coach);
     }
 
     @Override
@@ -20,7 +20,7 @@ public class InMemoryCoachRepository implements CoachRepository {
 
     @Override
     public void updateCoach(Coach updatedCoach) {
-        coaches.put(updatedCoach.getCoach_id(), updatedCoach);
+        coaches.put(updatedCoach.getCoachId(), updatedCoach);
     }
 
     @Override

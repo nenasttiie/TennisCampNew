@@ -2,9 +2,7 @@ package application.command.record;
 
 import application.command.Command;
 import application.services.RecordService;
-import domain.model.Coach;
 import domain.model.Record;
-import infrastructure.repository.InMemoryRecordRepository;
 
 import java.util.Scanner;
 
@@ -25,7 +23,7 @@ public class UpdateRecordCommand implements Command {
         Record record = recordService.findRecordById(recordId);
         String flag;
 
-        int playerId = record.getPlayer_id();
+        int playerId = record.getPlayerId();
         System.out.println("Менять ID игрока?");
         flag = scanner.nextLine();
 
@@ -35,7 +33,7 @@ public class UpdateRecordCommand implements Command {
             scanner.nextLine();
         }
 
-        int campId = record.getCamp_id();
+        int campId = record.getCampId();
         System.out.println("Менять Camp ID?");
         flag = scanner.nextLine();
 
@@ -45,7 +43,7 @@ public class UpdateRecordCommand implements Command {
             scanner.nextLine();
         }
 
-        String date = record.getBooking_date();
+        String date = record.getBookingDate();
         System.out.println("Менять дату?");
         flag = scanner.nextLine();
         if (flag.equals("Да") | flag.equals("да")) {

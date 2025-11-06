@@ -1,6 +1,5 @@
 package infrastructure.repository;
 
-import domain.model.Coach;
 import domain.model.Player;
 import domain.repository.PlayerRepository;
 
@@ -10,7 +9,7 @@ public class InMemoryPlayerRepository implements PlayerRepository {
     HashMap<Integer, Player> players = new HashMap<>();
     @Override
     public void addPlayer(Player player) {
-        players.put(player.getPlayer_id(), player);
+        players.put(player.getPlayerId(), player);
     }
 
     @Override
@@ -20,7 +19,7 @@ public class InMemoryPlayerRepository implements PlayerRepository {
 
     @Override
     public void updatePlayer(Player updatedPlayer) {
-        players.put(updatedPlayer.getPlayer_id(), updatedPlayer);
+        players.put(updatedPlayer.getPlayerId(), updatedPlayer);
     }
 
     @Override

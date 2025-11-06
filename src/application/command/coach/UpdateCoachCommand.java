@@ -3,7 +3,6 @@ package application.command.coach;
 import application.command.Command;
 import application.services.CoachService;
 import domain.model.Coach;
-import infrastructure.repository.InMemoryCoachRepository;
 
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class UpdateCoachCommand implements Command {
         Coach coach = coachService.findCoachById(coachId);
         String flag;
 
-        int campId = coach.getCamp_id();
+        int campId = coach.getCampId();
         System.out.println("Менять Camp ID?");
         flag = scanner.nextLine();
 

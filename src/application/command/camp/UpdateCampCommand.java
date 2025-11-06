@@ -3,7 +3,6 @@ package application.command.camp;
 import application.command.Command;
 import application.services.CampService;
 import domain.model.Camp;
-import infrastructure.repository.InMemoryCampRepository;
 
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class UpdateCampCommand implements Command {
         Camp camp = campService.findCampById(campId);
         String flag;
 
-        String campName = camp.getCamp_name();
+        String campName = camp.getCampName();
         System.out.println("Менять название кемпа?");
         flag = scanner.nextLine();
 

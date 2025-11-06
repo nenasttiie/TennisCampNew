@@ -1,45 +1,48 @@
 package domain.model;
 
 public class Player {
-    private int player_id;
-    private String last_name, name, phone_number, email;
+    private int playerId;
+    private String lastName;
+    private String name;
+    private String phoneNumber;
+    private String email;
     private double ntrp;
 
     @Override
     public String toString() {
         return "Player{" +
-                "player_id=" + player_id +
-                ", last_name='" + last_name + '\'' +
+                "playerId=" + playerId +
+                ", lastName='" + lastName + '\'' +
                 ", name='" + name + '\'' +
-                ", phone_number='" + phone_number + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", email='" + email + '\'' +
                 ", ntrp=" + ntrp +
                 '}';
     }
 
-    public Player(int player_id, String last_name, String name, String phone_number, String email, double ntrp) {
-        this.player_id = player_id;
-        this.last_name = last_name;
+    public Player(int playerId, String lastName, String name, String phone_number, String email, double ntrp) {
+        this.playerId = playerId;
+        this.lastName = lastName;
         this.name = name;
-        this.phone_number = phone_number;
+        this.phoneNumber = phone_number;
         this.email = email;
         this.ntrp = ntrp;
     }
 
-    public int getPlayer_id() {
-        return player_id;
+    public int getPlayerId() {
+        return playerId;
     }
 
-    public void setPlayer_id(int player_id) {
-        this.player_id = player_id;
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getName() {
@@ -50,12 +53,12 @@ public class Player {
         this.name = name;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {

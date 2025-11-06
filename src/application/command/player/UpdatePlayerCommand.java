@@ -2,9 +2,7 @@ package application.command.player;
 
 import application.command.Command;
 import application.services.PlayerService;
-import domain.model.Coach;
 import domain.model.Player;
-import infrastructure.repository.InMemoryPlayerRepository;
 
 import java.util.Scanner;
 
@@ -25,7 +23,7 @@ public class UpdatePlayerCommand implements Command {
         Player player = playerService.findPlayerById(playerId);
         String flag;
 
-        String lastName = player.getLast_name();
+        String lastName = player.getLastName();
         System.out.println("Менять фамилию?");
         flag = scanner.nextLine();
 
@@ -42,7 +40,7 @@ public class UpdatePlayerCommand implements Command {
             name = scanner.nextLine();
         }
 
-        String phoneNumber = player.getPhone_number();
+        String phoneNumber = player.getPhoneNumber();
         System.out.println("Менять номер телефона?");
         flag = scanner.nextLine();
         if (flag.equals("Да") | flag.equals("да")) {

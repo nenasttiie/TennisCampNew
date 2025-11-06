@@ -1,4 +1,4 @@
-package application.command.menu;
+package application.menu;
 
 import application.command.camp.CampCommands;
 import application.command.coach.CoachCommands;
@@ -14,8 +14,10 @@ public class ConsoleMenu {
     private final RecordCommands recordCommands;
     private final Scanner scanner;
 
-    public ConsoleMenu(CampCommands campCommands, CoachCommands coachCommands,
-                       PlayerCommands playerCommands, RecordCommands recordCommands) {
+    public ConsoleMenu(CampCommands campCommands,
+                       CoachCommands coachCommands,
+                       PlayerCommands playerCommands,
+                       RecordCommands recordCommands) {
         this.campCommands = campCommands;
         this.coachCommands = coachCommands;
         this.playerCommands = playerCommands;

@@ -1,14 +1,18 @@
 package domain.model;
 
 public class Camp {
-    private int camp_id;
-    private String camp_name, dates, country, cost, courts;
+    private int campId;
+    private String campName;
+    private String dates;
+    private String country;
+    private String cost;
+    private String courts;
 
     @Override
     public String toString() {
         return "Camp{" +
-                "camp_id=" + camp_id +
-                ", camp_name='" + camp_name + '\'' +
+                "campId=" + campId +
+                ", campName='" + campName + '\'' +
                 ", dates='" + dates + '\'' +
                 ", country='" + country + '\'' +
                 ", cost='" + cost + '\'' +
@@ -16,29 +20,29 @@ public class Camp {
                 '}';
     }
 
-    public Camp(int camp_id, String camp_name, String dates, String country, String cost, String courts) {
-        this.camp_id = camp_id;
-        this.camp_name = camp_name;
+    public Camp(int campId, String campName, String dates, String country, String cost, String courts) {
+        this.campId = campId;
+        this.campName = campName;
         this.dates = dates;
         this.country = country;
         this.cost = cost;
         this.courts = courts;
     }
 
-    public int getCamp_id() {
-        return camp_id;
+    public int getCampId() {
+        return campId;
     }
 
-    public void setCamp_id(int camp_id) {
-        this.camp_id = camp_id;
+    public void setCampId(int campId) {
+        this.campId = campId;
     }
 
-    public String getCamp_name() {
-        return camp_name;
+    public String getCampName() {
+        return campName;
     }
 
-    public void setCamp_name(String camp_name) {
-        this.camp_name = camp_name;
+    public void setCampName(String campName) {
+        this.campName = campName;
     }
 
     public String getDates() {

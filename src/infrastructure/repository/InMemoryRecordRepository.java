@@ -1,6 +1,5 @@
 package infrastructure.repository;
 
-import domain.model.Coach;
 import domain.model.Record;
 import domain.repository.RecordRepository;
 
@@ -10,7 +9,7 @@ public class InMemoryRecordRepository implements RecordRepository {
     HashMap<Integer, Record> records = new HashMap<>();
     @Override
     public void addRecord(Record record) {
-        records.put(record.getRecord_id(), record);
+        records.put(record.getRecordId(), record);
     }
 
     @Override
@@ -20,7 +19,7 @@ public class InMemoryRecordRepository implements RecordRepository {
 
     @Override
     public void updateRecord(Record updatedRecord) {
-        records.put(updatedRecord.getRecord_id(), updatedRecord);
+        records.put(updatedRecord.getRecordId(), updatedRecord);
     }
 
     @Override

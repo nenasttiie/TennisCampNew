@@ -3,7 +3,7 @@ package main;
 import application.command.*;
 import application.command.camp.*;
 import application.command.coach.*;
-import application.command.menu.ConsoleMenu;
+import application.menu.ConsoleMenu;
 import application.command.player.*;
 import application.command.record.*;
 import application.services.CampService;

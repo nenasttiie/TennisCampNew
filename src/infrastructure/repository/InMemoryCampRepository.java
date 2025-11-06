@@ -1,7 +1,6 @@
 package infrastructure.repository;
 
 import domain.model.Camp;
-import domain.model.Coach;
 import domain.repository.CampRepository;
 
 import java.util.HashMap;
@@ -10,7 +9,7 @@ public class InMemoryCampRepository implements CampRepository {
     HashMap<Integer, Camp> camps = new HashMap<>();
     @Override
     public void addCamp(Camp camp) {
-        camps.put(camp.getCamp_id(), camp);
+        camps.put(camp.getCampId(), camp);
     }
 
     @Override
@@ -20,7 +19,7 @@ public class InMemoryCampRepository implements CampRepository {
 
     @Override
     public void updateCamp(Camp updatedCamp) {
-        camps.put(updatedCamp.getCamp_id(), updatedCamp);
+        camps.put(updatedCamp.getCampId(), updatedCamp);
     }
 
     @Override
